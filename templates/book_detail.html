@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <p class=""> {{book.title}} </p>
+    <p>{{book.author}}</p>
+    <p>{{book.detail}}</p>
+    <p>{{book.price}}</p>
+<button class="btn btn-primary"> <a class="text-white" href="{% url 'update_book' book.id %}">Update Book</a> </button>
+<button class="btn btn-danger"><a href="{% url 'delete_book' book.id %}">Delete</a> </button>
+
+</div>
+{% endblock %}
